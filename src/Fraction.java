@@ -21,13 +21,14 @@ public class Fraction {
 	public static final Fraction ZERO;
 	
 	static {
-		UN= new Fraction(1,1);
-		ZERO=new Fraction(0,1);
+		UN = new Fraction(1,1);
+		ZERO = new Fraction(0,1);
 	}
 	
+	// Constructeur de la classe FRACTION
 	public Fraction(int num, int den){
-		this.NUM = NUM;
-		this.DEN = DEN;
+		this.NUM = num;
+		this.DEN = den;
 		Reduit();
 	}
 	
@@ -47,7 +48,19 @@ public class Fraction {
     	return new Fraction(N,pp);
     	// retourne une nouvelle fraction
     	// permet d'additionner deux fractions
-   	
+   	    // A/B + D/E = (AE + DB)/BE
+    	// La fonction retqrde le calcule B*E pour eviter
+    	// le stqck overflow : dépassement de la valeur maximale
     }
+    
+    public void setnum(int num){
+    	this.NUM = num;
+    }
+    
+    public int getnum(){
+    	return this.NUM;
+    }
+    
+  
 }
 
